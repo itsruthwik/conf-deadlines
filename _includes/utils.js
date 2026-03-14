@@ -17,13 +17,23 @@ function addUtcTimeZones() {
 function update_filtering(data) {
   var page_url = "{{site.baseurl}}";
   store.set("{{site.domain}}-subs", data.subs);
+  store.set("{{site.domain}}-showTBA", showTBA);
 
   $(".confItem").hide();
   for (const j in data.all_subs) {
     const s = data.all_subs[j];
     const identifier = "." + s + "-conf";
     if (data.subs.includes(s)) {
-      $(identifier).show();
+      $(identifier).each(function() {
+        var confId = $(this).attr('id');
+        var deadline = $('#' + confId + ' .deadline-time').text();
+        var isTBA = deadline === "TBA" || deadline.trim() === "";
+        
+        if (isTBA && !showTBA) {
+          return; // Skip TBA conferences if showTBA is false
+        }
+        $(this).show();
+      });
     }
   }
 

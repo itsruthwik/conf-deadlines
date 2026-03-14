@@ -47,6 +47,18 @@
                     </div>
                   </div>
                 </div>
+                <div class="row justify-content-center" style="margin-top: 10px;">
+                  <div class="row align-items-md-center col-12 col-10-md">
+                    <div class="col-12 col-md-5 filter-label">
+                      <label for="show-tba" class="align-center" style="margin-bottom: 0px; line-height: 1.5;">
+                        Show TBA Deadlines:
+                      </label>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <input type="checkbox" id="show-tba" name="show-tba" checked>
+                    </div>
+                  </div>
+                </div>
               </form>
             </div>
             <div class="row">
@@ -64,6 +76,9 @@
             </div>
         </div>
         <div id="confs">
+        <h1 id="next-30-days-title" style="padding-bottom: 15px; border-bottom: 2px solid #2e86de; margin-top: 20px;">Next 30 Days</h1>
+        <div id="next_30_confs"></div>
+        <h1 id="all-deadlines-title" style="padding-bottom: 15px; border-bottom: 2px solid #2e86de; margin-top: 20px;">All Deadlines</h1>
         <div id="coming_confs">
           {% for conf in site.data.conferences %}
           <div id="{{conf.id}}" class="ConfItem {% for sub in conf.sub %} {{sub}}-conf {% endfor %}">
@@ -175,7 +190,11 @@
           $('#{{conf.id}} .deadline-time').html("TBA");
         {% else %}
           // adjust date according to deadline timezone
-          var timezone = {% if conf.timezone %}"{{conf.timezone}}" {% else %} "America/New_York" {% endif %};
+          var timezone = "{% if conf.timezone %}{{conf.timezone}}{% else %}UTC-12{% endif %}";
+          // Handle TBA or invalid timezones by defaulting to UTC-12
+          if (timezone === "TBA" || timezone === "") {
+            timezone = "UTC-12";
+          }
           var confDate = moment.tz("{{conf.deadline}}", timezone);
 
           // render countdown timer
@@ -221,10 +240,119 @@
         {% endif %}
         {% endfor %}
 
-        // Sort coming_confs and past_confs
+        // Sort conferences into Next 30 Days and All Deadlines
+        // Note: diff = today.diff(confDate), so:
+        // - diff < 0 means deadline is in the future (e.g., -5 days = 5 days left)
+        // - diff > 0 means deadline has passed
+        // More negative = closer deadline (e.g., -5 is closer than -10)
+        var thirtyDaysMs = 30 * 24 * 60 * 60 * 1000;
+        
+        $("#coming_confs .ConfItem").each(function() {
+          var diffVal = $(this).attr('diff');
+          var diff = parseInt(diffVal, 10);
+          // Move to next 30 days if deadline is within 30 days in the future
+          // diff < 0 means future, diff >= -thirtyDaysMs means within 30 days
+          if (!isNaN(diff) && diff < 0 && diff >= -thirtyDaysMs) {
+            $(this).appendTo($("#next_30_confs"));
+          }
+        });
+
+        // Sort next 30 days by deadline (closest first = least negative first)
+        $("#next_30_confs .ConfItem").sort(function (a, b) {
+          var diffA = parseInt($(a).attr('diff'), 10);
+          var diffB = parseInt($(b).attr('diff'), 10);
+          return diffB - diffA;  // -5 - (-10) = 5, so -5 comes first (correct: 5 days before 10 days)
+        }).appendTo($("#next_30_confs"));
+
+        // Sort all deadlines by deadline (closest first = least negative first, TBA at end)
         $("#coming_confs .ConfItem").sort(function (a, b) {
-          return $(b).attr('diff') - $(a).attr('diff');
+          var diffA = parseInt($(a).attr('diff'), 10);
+          var diffB = parseInt($(b).attr('diff'), 10);
+          // TBA items have undefined diff, push them to end
+          if (isNaN(diffA) && isNaN(diffB)) return 0;
+          if (isNaN(diffA)) return 1;
+          if (isNaN(diffB)) return -1;
+          return diffB - diffA;  // Less negative comes first (5 days before 10 days)
         }).appendTo($("#coming_confs"));
+
+        // Sort past_confs (most recent first by default)
+        $("#past_confs .ConfItem").sort(function (a, b) {
+          var diffA = parseInt($(a).attr('diff'), 10);
+          var diffB = parseInt($(b).attr('diff'), 10);
+          return diffA - diffB;
+        }).appendTo($("#past_confs"));
+
+        // Hide empty sections
+        if ($("#next_30_confs .ConfItem").length === 0) {
+          $("#next_30-days-title").hide();
+          $("#next_30_confs").hide();
+        }
+        if ($("#coming_confs .ConfItem").length === 0) {
+          $("#all-deadlines-title").hide();
+          $("#coming_confs").hide();
+        }
+        if ($("#past_confs .ConfItem").length === 0) {
+          $("#past-events-title").hide();
+          $("#sort-order-checkbox").hide();
+          $("#past_confs").hide();
+        }
+
+        // TBA toggle functionality
+        var showTBA = store.get("{{site.domain}}-showTBA");
+        if (showTBA === null || showTBA === undefined) {
+          showTBA = true; // Default to showing TBA
+        }
+        $("#show-tba").prop("checked", showTBA);
+
+        function applyTBAFilter() {
+          showTBA = $("#show-tba").is(":checked");
+          store.set("{{site.domain}}-showTBA", showTBA);
+          
+          var selectedSubs = store.get("{{site.domain}}-subs") || all_subs;
+          if (!selectedSubs || selectedSubs.length === 0) {
+            selectedSubs = all_subs;
+          }
+          
+          $(".confItem").hide();
+          $(".ConfItem").each(function() {
+            var confId = $(this).attr('id');
+            var deadline = $('#' + confId + ' .deadline-time').text();
+            var timerText = $('#' + confId + ' .timer').text();
+            var isTBA = deadline === "TBA" || deadline.trim() === "" || timerText === "TBA";
+            
+            if (isTBA && !showTBA) {
+              return; // Skip TBA conferences if showTBA is false
+            }
+            
+            // Check if conference matches selected subs
+            var confSubs = $(this).attr('class').match(/(\w+)-conf/g);
+            if (confSubs) {
+              for (var i = 0; i < confSubs.length; i++) {
+                var sub = confSubs[i].replace('-conf', '');
+                if (selectedSubs.includes(sub)) {
+                  $(this).show();
+                  break;
+                }
+              }
+            }
+          });
+          
+          // Update section visibility
+          if ($("#next_30_confs .ConfItem:visible").length === 0) {
+            $("#next_30-days-title").hide();
+          } else {
+            $("#next_30-days-title").show();
+          }
+          if ($("#coming_confs .ConfItem:visible").length === 0) {
+            $("#all-deadlines-title").hide();
+          } else {
+            $("#all-deadlines-title").show();
+          }
+        }
+
+        $("#show-tba").on("click", function() {
+          applyTBAFilter();
+        });
 
         $("#sort-order-checkbox input").on("click", function() {
           if ($("#sort-order-checkbox input").is(":checked")) {

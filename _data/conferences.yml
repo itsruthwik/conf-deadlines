@@ -1,3 +1,18 @@
+- title: MWSCAS
+  year: 2027
+  id: mwscas27
+  full_name: Midwest Symposium on Circuits and Systems
+  link: https://mwscas2025.org/
+  deadline: '2027-04-01 00:00:00'
+  abstract_deadline: TBA
+  timezone: TBA
+  place: TBA
+  date: TBA
+  start: TBA
+  end: TBA
+  sub:
+  - ARCH
+  - CAD
 - title: ISCA
   year: 2026
   id: isca26
@@ -6,8 +21,8 @@
   deadline: TBA
   abstract_deadline: TBA
   timezone: TBA
-  place: Raleigh, USA
-  date: TBA
+  place: Raleigh, TBA, USA
+  date: June TBA-TBA, 2026
   start: TBA
   end: TBA
   sub:
@@ -77,7 +92,7 @@
   deadline: '2026-04-03 23:59:59'
   abstract_deadline: '2026-03-27 23:59:59'
   timezone: UTC-12
-  place: London, UK
+  place: London, UK, United Kingdom
   date: September 3-4, 2026
   start: '2026-09-03'
   end: '2026-09-04'
@@ -90,7 +105,6 @@
   full_name: Reconfigurable Architectures Workshop
   link: https://raw.necst.it/
   deadline: '2026-02-07 23:59:00'
-  abstract_deadline: TBA
   timezone: UTC-12
   place: New Orleans, USA
   date: May 25-26, 2026
@@ -105,7 +119,7 @@
   link: https://www.date-conference.com/
   deadline: TBA
   abstract_deadline: TBA
-  timezone: UTC-12
+  timezone: TBA
   place: Verona, Italy
   date: April 20-22, 2026
   start: '2026-04-20'
@@ -148,9 +162,9 @@
   id: fpt26
   full_name: International Conference on Field-Programmable Technology
   link: http://fpt.org/
-  deadline: TBA
-  abstract_deadline: TBA
-  timezone: TBA
+  deadline: '2026-06-12 23:59:59'
+  abstract_deadline: '2026-06-05 23:59:59'
+  timezone: UTC-12
   place: Honolulu, Hawaii, USA
   date: December 7-10, 2026
   start: '2026-12-07'
@@ -216,7 +230,7 @@
   abstract_deadline: '2026-03-16 23:59:00'
   timezone: UTC-05
   place: Finger Lakes, NY, USA
-  date: June 22 - June 24, 2026
+  date: June 22 - 24, 2026
   start: '2026-06-22'
   end: '2026-06-24'
   sub:
