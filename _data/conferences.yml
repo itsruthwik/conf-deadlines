@@ -1,3 +1,17 @@
+- title: HEART
+  year: 2026
+  id: heart26
+  full_name: HEART Conference
+  link: TBA
+  deadline: '2026-03-30 23:59:59'
+  abstract_deadline: '2026-03-23 23:59:59'
+  timezone: UTC-12
+  place: Heidelberg, Germany
+  date: June 17-19, 2026
+  start: '2026-06-17'
+  end: '2026-06-19'
+  sub:
+  - APP
 - title: MWSCAS
   year: 2027
   id: mwscas27
@@ -174,17 +188,17 @@
   - CAD
   - APP
 - title: FPL
-  year: 0
-  id: fpl0
+  year: 2026
+  id: fpl26
   full_name: International Conference on Field-Programmable Logic and Applications
   link: https://fpl.org/
-  deadline: TBA
-  abstract_deadline: TBA
-  timezone: TBA
-  place: TBA
-  date: TBA
-  start: TBA
-  end: TBA
+  deadline: '2026-04-03 23:59:59'
+  abstract_deadline: '2026-03-27 23:59:59'
+  timezone: UTC-12
+  place: Ghent, Belgium
+  date: September 7-11, 2024
+  start: 2024-09-07
+  end: 2024-09-11
   sub:
   - ARCH
   - CAD
@@ -237,17 +251,17 @@
   - ARCH
   - CAD
 - title: ARC
-  year: 2027
-  id: arc27
+  year: 2026
+  id: arc26
   full_name: Applied Reconfigurable Computing
   link: https://arc2025.org/
-  deadline: '2027-02-20 00:00:00'
-  abstract_deadline: TBA
+  deadline: '2026-02-22 23:59:59'
+  abstract_deadline: '2026-02-15 23:59:59'
   timezone: TBA
-  place: TBA
-  date: TBA
-  start: TBA
-  end: TBA
+  place: Cagliari– Sardinia (Italy)
+  date: April 8-10, 2026
+  start: '2026-04-08'
+  end: '2026-04-10'
   sub:
   - ARCH
   - CAD
