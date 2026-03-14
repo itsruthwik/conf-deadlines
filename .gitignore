@@ -4,3 +4,8 @@ vendor
 .vscode
 .DS_Store
 .idea
+
+# Scripts
+set_env.sh
+conductor/
+scripts/

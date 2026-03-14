@@ -1,6 +1,6 @@
-## AI Deadlines [![Build Status](https://travis-ci.com/abhshkdz/ai-deadlines.svg?branch=gh-pages)](https://travis-ci.com/abhshkdz/ai-deadlines)
+## FPGA Deadlines [![Build Status](https://travis-ci.com/abhshkdz/ai-deadlines.svg?branch=gh-pages)](https://travis-ci.com/abhshkdz/ai-deadlines)
 
-Countdown timers to keep track of a bunch of CV/NLP/ML/RO conference deadlines.
+Countdown timers to keep track of a bunch of FPGA conference deadlines.
 
 ## Contributing
 
@@ -8,7 +8,7 @@ Countdown timers to keep track of a bunch of CV/NLP/ML/RO conference deadlines.
 
 Contributions are very welcome!
 
-To keep things minimal, I'm only looking to list top-tier conferences in AI as per [conferenceranks.com][6] and my judgement calls. Please feel free to maintain a separate fork if you don't see your sub-field or conference of interest listed.
+To keep things minimal, I'm only looking to list top-tier conferences in FPGA as per [conferenceranks.com][6] and my judgement calls. Please feel free to maintain a separate fork if you don't see your sub-field or conference of interest listed.
 
 To add or update a deadline:
 - Fork the repository

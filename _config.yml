@@ -1,13 +1,12 @@
-title: AI Conference Deadlines
-description: Countdowns to top CV/NLP/ML/Robotics/AI conference deadlines
-author: Abhishek Das
+title: FPGA Conference Deadlines
+description: Countdowns to top FPGA conference deadlines
+author: Ruthwik Sunketa
 
-domain: "aideadlin.es"
+domain: ""
 baseurl: ""
 
-twitter_hashtag: machinelearning
-github_username: paperswithcode
-github_repo: ai-deadlines
+github_username: itsruthwik
+github_repo: fpga-deadlines
 
 markdown: kramdown
 ga_id:

@@ -1,0 +1,104 @@
+# This file contains the persistent conferences to track using the automated script.
+# The script will use the `link` or `cfp_link` to find dates and push updates to conferences.yml
+
+- id: fpga
+  title: ISFPGA
+  full_name: ACM/SIGDA International Symposium on Field-Programmable Gate Arrays
+  link: https://www.isfpga.org/
+  sub: ['ARCH', 'CAD', 'APP']
+
+- id: fccm
+  title: FCCM
+  full_name: IEEE International Symposium on Field-Programmable Custom Computing Machines
+  link: https://www.fccm.org/
+  sub: ['ARCH', 'CAD', 'APP']
+
+- id: fpl
+  title: FPL
+  full_name: International Conference on Field-Programmable Logic and Applications
+  link: https://fpl.org/
+  sub: ['ARCH', 'CAD', 'APP']
+
+- id: fpt
+  title: FPT
+  full_name: International Conference on Field-Programmable Technology
+  link: http://fpt.org/
+  sub: ['ARCH', 'CAD', 'APP']
+
+- id: arc
+  title: ARC
+  full_name: Applied Reconfigurable Computing
+  link: https://arc2025.org/ # Example base, script will resolve dynamic year
+  sub: ['ARCH', 'CAD', 'APP']
+
+- id: dac
+  title: DAC
+  full_name: Design Automation Conference
+  link: https://www.dac.com/
+  sub: ['CAD', 'ARCH']
+
+- id: iccad
+  title: ICCAD
+  full_name: International Conference on Computer-Aided Design
+  link: https://iccad.com/
+  sub: ['CAD']
+
+- id: date
+  title: DATE
+  full_name: Design, Automation and Test in Europe Conference
+  link: https://www.date-conference.com/
+  sub: ['CAD', 'ARCH', 'APP']
+
+- id: raw
+  title: RAW
+  full_name: Reconfigurable Architectures Workshop
+  link: https://raw.necst.it/
+  sub: ['ARCH']
+
+- id: asap
+  title: ASAP
+  full_name: Application-Specific Systems, Architectures and Processors
+  link: http://asap-conf.org/
+  sub: ['ARCH', 'APP']
+
+- id: mwscas
+  title: MWSCAS
+  full_name: Midwest Symposium on Circuits and Systems
+  link: https://mwscas2025.org/ # Example base, script will resolve dynamic year
+  sub: ['ARCH', 'CAD']
+
+- id: aspdac
+  title: ASP-DAC
+  full_name: Asia and South Pacific Design Automation Conference
+  link: https://aspdac.com/
+  sub: ['CAD']
+
+- id: glsvlsi
+  title: GLSVLSI
+  full_name: Great Lakes Symposium on VLSI
+  link: https://glsvlsi.org/
+  sub: ['ARCH', 'CAD']
+
+- id: micro
+  title: MICRO
+  full_name: International Symposium on Microarchitecture
+  link: https://microarch.org/
+  sub: ['ARCH']
+
+- id: asplos
+  title: ASPLOS
+  full_name: Architectural Support for Programming Languages and Operating Systems
+  link: https://www.asplos-conference.org/
+  sub: ['ARCH']
+
+- id: isca
+  title: ISCA
+  full_name: International Symposium on Computer Architecture
+  link: https://iscaconf.org/
+  sub: ['ARCH']
+
+- id: hpca
+  title: HPCA
+  full_name: High-Performance Computer Architecture
+  link: https://hpca-conf.org/
+  sub: ['ARCH']
