@@ -2,8 +2,8 @@ title: FPGA Conference Deadlines
 description: Countdowns to top FPGA conference deadlines
 author: Ruthwik Sunketa
 
-domain: ""
-baseurl: ""
+domain: "https://itsruthwik.github.io"
+baseurl: "/fpga-deadlines"
 
 github_username: itsruthwik
 github_repo: fpga-deadlines
