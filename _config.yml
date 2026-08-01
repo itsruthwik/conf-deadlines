@@ -1,5 +1,5 @@
-title: FPGA Conference Deadlines
-description: Countdowns to top FPGA conference deadlines
+title: Conf Deadlines
+description: Countdowns to top conference deadlines
 author: Ruthwik Sunketa
 
 domain: "https://itsruthwik.github.io"
@@ -12,3 +12,5 @@ markdown: kramdown
 ga_id:
 
 include: ['_pages']
+
+exclude: ['.sass-cache', '.jekyll-cache', 'Gemfile', 'Gemfile.lock', 'node_modules', 'vendor', 'AGENTS.md', 'requirements.txt', 'settings.json', 'utils', 'workflow']

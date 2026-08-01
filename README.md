@@ -1,10 +1,8 @@
-## FPGA Deadlines [![Build Status](https://travis-ci.com/abhshkdz/ai-deadlines.svg?branch=gh-pages)](https://travis-ci.com/abhshkdz/ai-deadlines)
+## Conf Deadlines [![Build Status](https://travis-ci.com/itsruthwik/conf-deadlines.svg?branch=gh-pages)](https://travis-ci.com/itsruthwik/conf-deadlines)
 
-Countdown timers to keep track of a bunch of FPGA conference deadlines.
+Countdown timers to keep track of a bunch of conference deadlines. Forked from [ai-deadlines][2].
 
 ## Contributing
-
-[![](https://sourcerer.io/fame/abhshkdz/abhshkdz/ai-deadlines/images/0)](https://sourcerer.io/fame/abhshkdz/abhshkdz/ai-deadlines/links/0)[![](https://sourcerer.io/fame/abhshkdz/abhshkdz/ai-deadlines/images/1)](https://sourcerer.io/fame/abhshkdz/abhshkdz/ai-deadlines/links/1)[![](https://sourcerer.io/fame/abhshkdz/abhshkdz/ai-deadlines/images/2)](https://sourcerer.io/fame/abhshkdz/abhshkdz/ai-deadlines/links/2)[![](https://sourcerer.io/fame/abhshkdz/abhshkdz/ai-deadlines/images/3)](https://sourcerer.io/fame/abhshkdz/abhshkdz/ai-deadlines/links/3)[![](https://sourcerer.io/fame/abhshkdz/abhshkdz/ai-deadlines/images/4)](https://sourcerer.io/fame/abhshkdz/abhshkdz/ai-deadlines/links/4)[![](https://sourcerer.io/fame/abhshkdz/abhshkdz/ai-deadlines/images/5)](https://sourcerer.io/fame/abhshkdz/abhshkdz/ai-deadlines/links/5)[![](https://sourcerer.io/fame/abhshkdz/abhshkdz/ai-deadlines/images/6)](https://sourcerer.io/fame/abhshkdz/abhshkdz/ai-deadlines/links/6)[![](https://sourcerer.io/fame/abhshkdz/abhshkdz/ai-deadlines/images/7)](https://sourcerer.io/fame/abhshkdz/abhshkdz/ai-deadlines/links/7)
 
 Contributions are very welcome!
 
@@ -32,7 +30,6 @@ To add or update a deadline:
       start: YYYY-MM-DD
       end: YYYY-MM-DD
       paperslink: link-to-full-paper-list.com
-      pwclink: link-to-papers-with-code.com
       hindex: 100.0
       sub: SP
       note: Important
@@ -67,7 +64,7 @@ It uses:
 
 - [IcoMoon Icons](https://icomoon.io/#icons-icomoon): [GPL](http://www.gnu.org/licenses/gpl.html) / [CC BY4.0](http://creativecommons.org/licenses/by/4.0/)
 
-[1]: https://abhshkdz.mit-license.org/
+[1]: ./LICENSE
 [2]: http://aideadlin.es/
 [3]: https://github.com/LukasMosser/geo-deadlines
 [4]: https://github.com/tbryn/neuro-deadlines

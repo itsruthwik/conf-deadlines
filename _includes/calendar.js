@@ -86,6 +86,7 @@ function load_conference_list() {
   var conf_list_all = [];
   {% for conf in site.data.conferences %}
     // add deadlines in red
+    {% if conf.deadline != "TBA" %}
     conf_list_all.push({
       id: "{{conf.id}}-deadline",
       abbreviation: "{{conf.id}}",
@@ -98,9 +99,10 @@ function load_conference_list() {
       startDate: Date.parse("{{conf.deadline}}"),
       endDate: Date.parse("{{conf.deadline}}"),
     });
+    {% endif %}
 
     // add Conferences in chosen color
-    {% if conf.start != "" %}
+    {% if conf.start and conf.start != "" and conf.start != "TBA" %}
       var color = "black";
       {% assign conf_sub = conf.sub | split: ',' | first | strip %} // use first sub to choose color
       {% for type in site.data.types %}

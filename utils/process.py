@@ -56,9 +56,25 @@ def ordered_dump(data, stream=None, Dumper=yaml.Dumper, **kwds):
 
 dateformat = '%Y-%m-%d %H:%M:%S'
 tba_words = ["tba", "tbd"]
+fallback_tz = 'UTC-12'
 
-right_now = datetime.datetime.utcnow().replace(
-    microsecond=0).strftime(dateformat)
+
+def deadline_to_utc(conf):
+    """Parse a conference deadline as an aware UTC datetime.
+
+    Defaults unknown/TBA timezones to UTC-12 (end-of-day AoE convention),
+    matching the behavior of the site's client-side JavaScript.
+    """
+    tz = conf.get('timezone', fallback_tz)
+    if tz in ('', 'TBA', 'TBD', None):
+        tz = fallback_tz
+    zone = tz.replace('UTC+', 'Etc/GMT-').replace('UTC-', 'Etc/GMT+')
+    try:
+        tzinfo = pytz.timezone(zone)
+    except pytz.UnknownTimeZoneError:
+        tzinfo = pytz.timezone('Etc/GMT+12')
+    naive = datetime.datetime.strptime(conf['deadline'], dateformat)
+    return pytz.utc.normalize(naive.replace(tzinfo=tzinfo))
 
 
 # Helper function for yes no questions
@@ -107,13 +123,8 @@ with open("../_data/conferences.yml", 'r') as stream:
         tba = [x for x in data if x['deadline'].lower() in tba_words]
 
         # just sort:
-        conf.sort(key=lambda x: pytz.utc.normalize(datetime.datetime.strptime(x['deadline'], dateformat).replace(tzinfo=pytz.timezone(x['timezone'].replace('UTC+', 'Etc/GMT-').replace('UTC-', 'Etc/GMT+')))))
+        conf.sort(key=deadline_to_utc)
         print("Date Sorting:")
-        for q in conf + tba:
-            print(q["deadline"], " - ", q["title"])
-        print("\n\n")
-        conf.sort(key=lambda x: pytz.utc.normalize(datetime.datetime.strptime(x['deadline'], dateformat).replace(tzinfo=pytz.timezone(x['timezone'].replace('UTC+', 'Etc/GMT-').replace('UTC-', 'Etc/GMT+')))).strftime(dateformat) < right_now)
-        print("Date and Passed Deadline Sorting with tba:")
         for q in conf + tba:
             print(q["deadline"], " - ", q["title"])
         print("\n\n")

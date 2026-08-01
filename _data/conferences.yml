@@ -1,8 +1,162 @@
+- title: FPL
+  year: 2024
+  id: fpl24
+  full_name: International Conference on Field-Programmable Logic and Applications
+  link: https://fpl.org/
+  deadline: '2024-03-13 23:59:59'
+  timezone: UTC-12
+  place: Turin, Italy
+  date: September 2-6, 2024
+  start: 2024-09-02
+  end: 2024-09-06
+  sub:
+  - ARCH
+  - CAD
+  - APP
+- title: FPGA
+  year: 2025
+  id: fpga25
+  full_name: ACM/SIGDA International Symposium on Field-Programmable Gate Arrays
+  link: https://www.isfpga.org/
+  deadline: '2024-10-08 23:59:59'
+  abstract_deadline: '2024-10-01 23:59:59'
+  timezone: UTC-12
+  place: Monterey, CA, USA
+  date: February 27 - March 1, 2025
+  start: 2025-02-27
+  end: 2025-03-01
+  sub:
+  - ARCH
+  - CAD
+  - APP
+- title: FCCM
+  year: 2025
+  id: fccm25
+  full_name: IEEE International Symposium on Field-Programmable Custom Computing Machines
+  link: https://www.fccm.org/
+  deadline: '2025-01-19 23:59:59'
+  abstract_deadline: '2025-01-10 23:59:59'
+  timezone: UTC-12
+  place: TBA
+  date: May 4-7, 2025
+  start: 2025-05-04
+  end: 2025-05-07
+  sub:
+  - ARCH
+  - CAD
+  - APP
+- title: FPT
+  year: 2025
+  id: fpt25
+  full_name: International Conference on Field-Programmable Technology
+  link: https://www.icfpt.org/
+  deadline: '2025-08-01 23:59:59'
+  abstract_deadline: '2025-07-20 23:59:59'
+  timezone: UTC-12
+  place: TBA
+  date: December 2025
+  start: 2025-12-01
+  end: 2025-12-04
+  sub:
+  - ARCH
+  - CAD
+  - APP
+- title: ISFPGA
+  year: 2026
+  id: fpga26
+  full_name: ACM/SIGDA International Symposium on Field-Programmable Gate Arrays
+  link: https://www.isfpga.org/
+  deadline: '2025-10-01 23:59:59'
+  abstract_deadline: '2025-09-24 23:59:59'
+  timezone: TBA
+  place: Monterey, CA, USA
+  date: February 22 - 24, 2026
+  start: '2026-02-22'
+  end: '2026-02-24'
+  sub:
+  - ARCH
+  - CAD
+  - APP
+- title: FCCM
+  year: 2026
+  id: fccm26
+  full_name: IEEE International Symposium on Field-Programmable Custom Computing Machines
+  link: https://www.fccm.org/
+  deadline: '2026-01-17 23:59:59'
+  abstract_deadline: '2026-01-10 23:59:59'
+  timezone: UTC-12
+  place: Atlanta, GA, USA
+  date: May 13-16, 2026
+  start: '2026-05-13'
+  end: '2026-05-16'
+  sub:
+  - ARCH
+  - CAD
+  - APP
+- title: RAW
+  year: 2026
+  id: raw26
+  full_name: Reconfigurable Architectures Workshop
+  link: https://raw.necst.it/
+  deadline: '2026-02-07 23:59:00'
+  timezone: UTC-12
+  place: New Orleans, USA
+  date: May 25-26, 2026
+  start: '2026-05-25'
+  end: '2026-05-26'
+  sub:
+  - ARCH
+- title: ARC
+  year: 2026
+  id: arc26
+  full_name: Applied Reconfigurable Computing
+  link: https://arc2025.org/
+  deadline: '2026-02-22 23:59:59'
+  abstract_deadline: '2026-02-15 23:59:59'
+  timezone: TBA
+  place: Cagliari– Sardinia (Italy)
+  date: April 8-10, 2026
+  start: '2026-04-08'
+  end: '2026-04-10'
+  sub:
+  - ARCH
+  - CAD
+  - APP
+- title: GLSVLSI
+  year: 2026
+  id: glsvlsi26
+  full_name: Great Lakes Symposium on VLSI
+  link: https://glsvlsi.org/
+  deadline: '2026-03-16 23:59:00'
+  abstract_deadline: '2026-03-16 23:59:00'
+  timezone: UTC-05
+  place: Finger Lakes, NY, USA
+  date: June 22 - 24, 2026
+  start: '2026-06-22'
+  end: '2026-06-24'
+  sub:
+  - ARCH
+  - CAD
+- title: MWSCAS
+  year: 2026
+  id: mwscas26
+  full_name: Midwest Symposium on Circuits and Systems
+  link: https://mwscas2026.org/
+  deadline: '2026-03-16 23:59:59'
+  abstract_deadline: TBA
+  timezone: TBA
+  place: Cincinnati, OH, USA
+  date: August 9-12, 2026
+  start: '2026-08-09'
+  end: '2026-08-12'
+  sub:
+  - ARCH
+  - CAD
 - title: HEART
   year: 2026
   id: heart26
   full_name: HEART Conference
-  link: TBA
+  link: https://heart2026.github.io/
   deadline: '2026-03-30 23:59:59'
   abstract_deadline: '2026-03-23 23:59:59'
   timezone: UTC-12
@@ -12,11 +166,162 @@
   end: '2026-06-19'
   sub:
   - APP
+- title: ASAP
+  year: 2026
+  id: asap26
+  full_name: Application-Specific Systems, Architectures and Processors
+  link: http://asap-conf.org/
+  deadline: '2026-04-03 23:59:59'
+  abstract_deadline: '2026-03-27 23:59:59'
+  timezone: UTC-12
+  place: London, UK, United Kingdom
+  date: September 3-4, 2026
+  start: '2026-09-03'
+  end: '2026-09-04'
+  sub:
+  - ARCH
+  - APP
+- title: FPL
+  year: 2026
+  id: fpl26
+  full_name: International Conference on Field-Programmable Logic and Applications
+  link: https://fpl.org/
+  deadline: '2026-04-03 23:59:59'
+  abstract_deadline: '2026-03-27 23:59:59'
+  timezone: UTC-12
+  place: Ghent, Belgium
+  date: September 7-11, 2026
+  start: 2026-09-07
+  end: 2026-09-11
+  sub:
+  - ARCH
+  - CAD
+  - APP
+- title: ICCAD
+  year: 2026
+  id: iccad26
+  full_name: International Conference on Computer-Aided Design
+  link: https://iccad.com/
+  deadline: '2026-04-14 23:59:59'
+  abstract_deadline: '2026-04-07 23:59:59'
+  timezone: TBA
+  place: San Jose, California, USA
+  date: November 8-12, 2026
+  start: '2026-11-08'
+  end: '2026-11-12'
+  sub:
+  - CAD
+- title: FPT
+  year: 2026
+  id: fpt26
+  full_name: International Conference on Field-Programmable Technology
+  link: https://fpt2026.uark.edu/
+  deadline: '2026-06-19 23:59:59'
+  abstract_deadline: '2026-06-19 23:59:59'
+  timezone: UTC-12
+  place: Honolulu, Hawaii, USA
+  date: December 7-10, 2026
+  start: '2026-12-07'
+  end: '2026-12-10'
+  sub:
+  - ARCH
+  - CAD
+  - APP
+- title: ASP-DAC
+  year: 2027
+  id: aspdac27
+  full_name: Asia and South Pacific Design Automation Conference
+  link: https://www.aspdac.com/
+  deadline: '2026-07-18 17:00:00'
+  abstract_deadline: '2026-07-11 17:00:00'
+  timezone: UTC-12
+  place: Tokyo, Japan
+  date: January 25-28, 2027
+  start: '2027-01-25'
+  end: '2027-01-28'
+  sub:
+  - CAD
+- title: HPCA
+  year: 2027
+  id: hpca27
+  full_name: High-Performance Computer Architecture
+  link: https://www.hpca-conf.org/
+  deadline: '2026-07-31 23:59:59'
+  abstract_deadline: '2026-07-24 23:59:59'
+  timezone: UTC-12
+  place: Salt Lake City, Utah, USA
+  date: March 20-24, 2027
+  start: '2027-03-20'
+  end: '2027-03-24'
+  sub:
+  - ARCH
+- title: ASPLOS
+  year: 2027
+  id: asplos27
+  full_name: Architectural Support for Programming Languages and Operating Systems
+  link: https://www.asplos-conference.org/
+  deadline: '2026-09-09 23:59:59'
+  abstract_deadline: TBA
+  timezone: UTC-12
+  place: Heraklion, Crete, Greece
+  date: April 11-15, 2027
+  start: '2027-04-11'
+  end: '2027-04-15'
+  sub:
+  - ARCH
+- title: DATE
+  year: 2027
+  id: date27
+  full_name: Design, Automation and Test in Europe Conference
+  link: https://www.date-conference.com/
+  deadline: '2026-09-20 23:59:59'
+  abstract_deadline: '2026-09-13 23:59:59'
+  timezone: UTC-12
+  place: Dresden, Germany
+  date: March 22-24, 2027
+  start: '2027-03-22'
+  end: '2027-03-24'
+  sub:
+  - CAD
+  - ARCH
+  - APP
+- title: ISFPGA
+  year: 2027
+  id: fpga27
+  full_name: ACM/SIGDA International Symposium on Field-Programmable Gate Arrays
+  link: https://www.isfpga.org/
+  deadline: '2026-10-08 23:59:59'
+  abstract_deadline: '2026-10-01 23:59:59'
+  timezone: UTC-12
+  place: California, USA
+  date: March 14-16, 2027
+  start: '2027-03-14'
+  end: '2027-03-16'
+  sub:
+  - ARCH
+  - CAD
+  - APP
+- title: ARC
+  year: 2027
+  id: arc27
+  full_name: Applied Reconfigurable Computing
+  link: http://www.arc2027.org
+  deadline: '2026-10-25 23:59:59'
+  abstract_deadline: TBA
+  timezone: TBA
+  place: Berlin, Germany
+  date: March 31-April 2, 2027
+  start: '2027-03-31'
+  end: '2027-04-02'
+  sub:
+  - ARCH
+  - CAD
+  - APP
 - title: MWSCAS
   year: 2027
   id: mwscas27
   full_name: Midwest Symposium on Circuits and Systems
-  link: https://mwscas2025.org/
+  link: https://www.mwscas.org/
   deadline: '2027-04-01 00:00:00'
   abstract_deadline: TBA
   timezone: TBA
@@ -83,49 +388,6 @@
   end: TBA
   sub:
   - CAD
-- title: MWSCAS
-  year: 2026
-  id: mwscas26
-  full_name: Midwest Symposium on Circuits and Systems
-  link: https://mwscas2025.org/
-  deadline: '2026-03-16 23:59:59'
-  abstract_deadline: TBA
-  timezone: TBA
-  place: Cincinnati, OH, USA
-  date: August 9-12, 2026
-  start: '2026-08-09'
-  end: '2026-08-12'
-  sub:
-  - ARCH
-  - CAD
-- title: ASAP
-  year: 2026
-  id: asap26
-  full_name: Application-Specific Systems, Architectures and Processors
-  link: http://asap-conf.org/
-  deadline: '2026-04-03 23:59:59'
-  abstract_deadline: '2026-03-27 23:59:59'
-  timezone: UTC-12
-  place: London, UK, United Kingdom
-  date: September 3-4, 2026
-  start: '2026-09-03'
-  end: '2026-09-04'
-  sub:
-  - ARCH
-  - APP
-- title: RAW
-  year: 2026
-  id: raw26
-  full_name: Reconfigurable Architectures Workshop
-  link: https://raw.necst.it/
-  deadline: '2026-02-07 23:59:00'
-  timezone: UTC-12
-  place: New Orleans, USA
-  date: May 25-26, 2026
-  start: '2026-05-25'
-  end: '2026-05-26'
-  sub:
-  - ARCH
 - title: DATE
   year: 2026
   id: date26
@@ -142,20 +404,6 @@
   - CAD
   - ARCH
   - APP
-- title: ICCAD
-  year: 2026
-  id: iccad26
-  full_name: International Conference on Computer-Aided Design
-  link: https://iccad.com/
-  deadline: '2026-04-14 23:59:59'
-  abstract_deadline: '2026-04-07 23:59:59'
-  timezone: TBA
-  place: San Jose, California, USA
-  date: November 8-12, 2026
-  start: '2026-11-08'
-  end: '2026-11-12'
-  sub:
-  - CAD
 - title: DAC
   year: 2026
   id: dac26
@@ -171,161 +419,18 @@
   sub:
   - CAD
   - ARCH
-- title: FPT
-  year: 2026
-  id: fpt26
-  full_name: International Conference on Field-Programmable Technology
-  link: http://fpt.org/
-  deadline: '2026-06-12 23:59:59'
-  abstract_deadline: '2026-06-05 23:59:59'
-  timezone: UTC-12
-  place: Honolulu, Hawaii, USA
-  date: December 7-10, 2026
-  start: '2026-12-07'
-  end: '2026-12-10'
-  sub:
-  - ARCH
-  - CAD
-  - APP
-- title: FPL
-  year: 2026
-  id: fpl26
-  full_name: International Conference on Field-Programmable Logic and Applications
-  link: https://fpl.org/
-  deadline: '2026-04-03 23:59:59'
-  abstract_deadline: '2026-03-27 23:59:59'
-  timezone: UTC-12
-  place: Ghent, Belgium
-  date: September 7-11, 2024
-  start: 2024-09-07
-  end: 2024-09-11
-  sub:
-  - ARCH
-  - CAD
-  - APP
-- title: FCCM
-  year: 2026
-  id: fccm26
-  full_name: IEEE International Symposium on Field-Programmable Custom Computing Machines
-  link: https://www.fccm.org/
-  deadline: '2026-01-17 23:59:59'
-  abstract_deadline: '2026-01-10 23:59:59'
-  timezone: UTC-12
-  place: Atlanta, GA, USA
-  date: May 13-16, 2026
-  start: '2026-05-13'
-  end: '2026-05-16'
-  sub:
-  - ARCH
-  - CAD
-  - APP
-- title: ISFPGA
-  year: 2026
-  id: fpga26
-  full_name: ACM/SIGDA International Symposium on Field-Programmable Gate Arrays
-  link: https://www.isfpga.org/
-  deadline: '2025-10-01 23:59:59'
-  abstract_deadline: '2025-09-24 23:59:59'
+- title: DAC
+  year: 2027
+  id: dac27
+  full_name: Design Automation Conference
+  link: https://www.dac.com/
+  deadline: TBA
+  abstract_deadline: TBA
   timezone: TBA
-  place: Monterey, CA, USA
-  date: February 22 - 24, 2026
-  start: '2026-02-22'
-  end: '2026-02-24'
+  place: San Jose, CA, USA
+  date: July 11-14, 2027
+  start: '2027-07-11'
+  end: '2027-07-14'
   sub:
-  - ARCH
   - CAD
-  - APP
-- title: GLSVLSI
-  year: 2026
-  id: glsvlsi26
-  full_name: Great Lakes Symposium on VLSI
-  link: https://glsvlsi.org/
-  deadline: '2026-03-16 23:59:00'
-  abstract_deadline: '2026-03-16 23:59:00'
-  timezone: UTC-05
-  place: Finger Lakes, NY, USA
-  date: June 22 - 24, 2026
-  start: '2026-06-22'
-  end: '2026-06-24'
-  sub:
   - ARCH
-  - CAD
-- title: ARC
-  year: 2026
-  id: arc26
-  full_name: Applied Reconfigurable Computing
-  link: https://arc2025.org/
-  deadline: '2026-02-22 23:59:59'
-  abstract_deadline: '2026-02-15 23:59:59'
-  timezone: TBA
-  place: Cagliari– Sardinia (Italy)
-  date: April 8-10, 2026
-  start: '2026-04-08'
-  end: '2026-04-10'
-  sub:
-  - ARCH
-  - CAD
-  - APP
-- title: FPGA
-  year: 2025
-  id: fpga25
-  full_name: ACM/SIGDA International Symposium on Field-Programmable Gate Arrays
-  link: https://www.isfpga.org/
-  deadline: '2024-10-08 23:59:59'
-  abstract_deadline: '2024-10-01 23:59:59'
-  timezone: UTC-12
-  place: Monterey, CA, USA
-  date: February 27 - March 1, 2025
-  start: 2025-02-27
-  end: 2025-03-01
-  sub:
-  - ARCH
-  - CAD
-  - APP
-- title: FCCM
-  year: 2025
-  id: fccm25
-  full_name: IEEE International Symposium on Field-Programmable Custom Computing Machines
-  link: https://www.fccm.org/
-  deadline: '2025-01-19 23:59:59'
-  abstract_deadline: '2025-01-10 23:59:59'
-  timezone: UTC-12
-  place: TBA
-  date: May 4-7, 2025
-  start: 2025-05-04
-  end: 2025-05-07
-  sub:
-  - ARCH
-  - CAD
-  - APP
-- title: FPL
-  year: 2024
-  id: fpl24
-  full_name: International Conference on Field-Programmable Logic and Applications
-  link: https://fpl.org/
-  deadline: '2024-03-13 23:59:59'
-  timezone: UTC-12
-  place: Turin, Italy
-  date: September 2-6, 2024
-  start: 2024-09-02
-  end: 2024-09-06
-  sub:
-  - ARCH
-  - CAD
-  - APP
-- title: FPT
-  year: 2025
-  id: fpt25
-  full_name: International Conference on Field-Programmable Technology
-  link: http://fpt.org/
-  deadline: '2025-08-01 23:59:59'
-  abstract_deadline: '2025-07-20 23:59:59'
-  timezone: UTC-12
-  place: TBA
-  date: December 2025
-  start: 2025-12-01
-  end: 2025-12-04
-  sub:
-  - ARCH
-  - CAD
-  - APP

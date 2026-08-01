@@ -9,3 +9,14 @@ vendor
 set_env.sh
 conductor/
 scripts/
+
+# Local tooling
+settings.json
+.opencode-tmp/
+
+# Workflow working dirs
+workflow/cache/
+workflow/staged/
+
+# Whole workflow pipeline (not on git yet)
+workflow/

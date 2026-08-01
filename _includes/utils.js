@@ -19,7 +19,7 @@ function update_filtering(data) {
   store.set("{{site.domain}}-subs", data.subs);
   store.set("{{site.domain}}-showTBA", showTBA);
 
-  $(".confItem").hide();
+  $(".ConfItem").hide();
   for (const j in data.all_subs) {
     const s = data.all_subs[j];
     const identifier = "." + s + "-conf";
