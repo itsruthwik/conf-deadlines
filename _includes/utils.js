@@ -45,22 +45,46 @@ function update_filtering(data) {
 }
 
 function createCalendarFromObject(data) {
-  return createCalendar({
-    options: {
-      class: "calendar-obj",
+  var title = data.title || "";
+  var start = data.date;
+  var duration = data.duration || 60;
+  var end = new Date(start.getTime() + duration * 60000);
+  var fmt = function (d) {
+    return d.toISOString().replace(/-|:|\.\d+/g, "");
+  };
 
-      // You can pass an ID. If you don't, one will be generated for you
-      id: data.id,
-    },
-    data: {
-      // Event title
-      title: data.title,
+  var googleUrl =
+    "https://calendar.google.com/calendar/render?action=TEMPLATE" +
+    "&text=" + encodeURIComponent(title) +
+    "&dates=" + fmt(start) + "/" + fmt(end) +
+    "&details=" + encodeURIComponent(data.description || "") +
+    "&location=" + encodeURIComponent(data.address || "");
 
-      // Event start date
-      start: data.date,
+  var ics = [
+    "BEGIN:VCALENDAR",
+    "VERSION:2.0",
+    "BEGIN:VEVENT",
+    "URL:" + document.URL,
+    "DTSTART:" + fmt(start),
+    "DTEND:" + fmt(end),
+    "SUMMARY:" + title,
+    "DESCRIPTION:" + (data.description || ""),
+    "LOCATION:" + (data.address || ""),
+    "END:VEVENT",
+    "END:VCALENDAR",
+  ].join("\n");
+  var outlookUrl = "data:text/calendar;charset=utf8," + encodeURIComponent(ics);
 
-      // Event duration
-      duration: 60,
-    },
-  });
+  var googleIcon = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="16" height="16" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>';
+
+  var outlookIcon = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="#0078D4" d="M7.15 4.33h9.7c.43 0 .8.37.8.8v13.74c0 .43-.37.8-.8.8h-9.7c-.43 0-.8-.37-.8-.8V5.13c0-.43.37-.8.8-.8z"/><path fill="#fff" d="M12 10.5 7.65 14.4v2.06c0 .43.37.8.8.8h7.1c.43 0 .8-.37.8-.8v-2.06L12 10.5z"/><path fill="#fff" d="M8.45 7.5h7.1c.43 0 .8.37.8.8v3.35L12 14.9l-4.35-3.25V8.3c0-.43.37-.8.8-.8z"/></svg>';
+
+  var div = document.createElement("div");
+  div.className = "add-to-calendar calendar-obj";
+  div.id = data.id;
+  div.innerHTML =
+    '<img src="{{site.baseurl}}/static/img/calendar.png" alt="">' +
+    '<span class="ind-cal"><a class="cal-btn icon-google" target="_blank" rel="noopener" href="' + googleUrl + '">' + googleIcon + ' Google</a></span>' +
+    '<span class="ind-cal"><a class="cal-btn icon-outlook" target="_blank" rel="noopener" href="' + outlookUrl + '">' + outlookIcon + ' Outlook</a></span>';
+  return div;
 }

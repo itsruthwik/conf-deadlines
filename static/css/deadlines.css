@@ -303,6 +303,21 @@ footer {
   margin: 0 5px;
 }
 
+.cal-btn {
+  color: #333;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.cal-btn:hover {
+  text-decoration: underline;
+}
+
+.cal-btn svg {
+  vertical-align: -3px;
+  margin-right: 3px;
+}
+
 .calendar img {
   height: 20px;
 }
