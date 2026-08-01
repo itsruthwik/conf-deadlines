@@ -12,13 +12,67 @@ permalink: /calendar/
   {% include header.html %}
   <div class="container">
     <br>
-    <h1>Calendar Overview of Conference Deadlines and Dates</h1>
-    <div class="row">
-      <div class="meta col-sm-12">
-        Overview of deadlines and conference dates in a calendar.
-        Also, <a href="{{site.baseurl}}/">countdowns</a> to conference deadlines.
+
+    <div id="deadlines-by-month">
+      <h1>Deadlines by Month</h1>
+      {% assign month_names = "January,February,March,April,May,June,July,August,September,October,November,December" | split: "," %}
+      {% assign all_best = "" | split: "" %}
+      {% assign all_titles = "" | split: "" %}
+      {% for conf in site.data.conferences %}
+        {% if conf.deadline != "TBA" %}
+          {% assign all_titles = all_titles | push: conf.title %}
+        {% endif %}
+      {% endfor %}
+      {% assign all_titles = all_titles | uniq %}
+
+      {% for title in all_titles %}
+        {% assign best = site.data.conferences[0] %}
+        {% assign best_year = 0 %}
+        {% for conf in site.data.conferences %}
+          {% if conf.deadline != "TBA" and conf.title == title and conf.year > best_year %}
+            {% assign best = conf %}
+            {% assign best_year = conf.year %}
+          {% endif %}
+        {% endfor %}
+        {% assign all_best = all_best | push: best %}
+      {% endfor %}
+
+      {% for m in (1..12) %}
+        {% assign m_index = m | minus: 1 %}
+        {% assign m_pad = m | prepend: "00" | slice: -2, 2 %}
+        {% assign month_items = "" | split: "" %}
+        {% for best in all_best %}
+          {% assign bm = best.deadline | date: "%m" %}
+          {% if bm == m_pad %}
+            {% assign item = best.deadline | append: "|" | append: best.title | append: " " | append: best.year | append: "|" | append: best.link %}
+            {% assign month_items = month_items | push: item %}
+          {% endif %}
+        {% endfor %}
+        {% assign month_items = month_items | sort %}
+        <div class="month-section">
+          <h2>{{ month_names[m_index] }}</h2>
+          {% if month_items.size == 0 %}
+            <p class="meta">No deadlines this month.</p>
+          {% else %}
+            <ul class="month-deadlines">
+              {% for it in month_items %}
+                {% assign parts = it | split: "|" %}
+                <li><a href="{{ parts[2] }}" target="_blank">{{ parts[1] }}</a> &mdash; {{ parts[0] | date: "%b %-d, %Y" }}</li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="page-header">
+      <h1>Calendar Overview of Conference Deadlines and Dates</h1>
+      <div class="row">
+        <div class="meta col-sm-12">
+          Overview of deadlines and conference dates in a calendar.
+          Also, <a href="{{site.baseurl}}/">countdowns</a> to conference deadlines.
+        </div>
       </div>
-      <br>
     </div>
 
     <br>

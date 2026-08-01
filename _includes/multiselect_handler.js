@@ -2,6 +2,7 @@
 $("#subject-select").multiselect({
   includeSelectAllOption: true,
   numberDisplayed: 5,
+  buttonWidth: '220px',
   onChange: function (option, checked, select) {
     var csub = $(option).val();
     if (checked == true) {

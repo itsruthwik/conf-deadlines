@@ -4,7 +4,7 @@
         clickDay: function (e) {
           if (e.events.length > 0) {
             for (var i in e.events) {
-              window.open("{{site.baseurl}}/conference?id=" + e.events[i].abbreviation, "_self")
+              window.open(e.events[i].link, "_self")
             }
           }
         },
@@ -92,6 +92,7 @@ function load_conference_list() {
       abbreviation: "{{conf.id}}",
       name: "{{conf.title}} {{conf.year}}",
       color: "red",
+      link: "{{conf.link}}",
       location: "{{conf.place}}",
       date: "{{conf.date}}",
       hindex: "{{conf.hindex}}",
@@ -115,6 +116,7 @@ function load_conference_list() {
         abbreviation: "{{conf.id}}",
         name: "{{conf.title}} {{conf.year}}",
         color: color,
+        link: "{{conf.link}}",
         location: "{{conf.place}}",
         date: "{{conf.date}}",
         hindex: "{{conf.hindex}}",

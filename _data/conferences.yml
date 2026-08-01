@@ -13,7 +13,7 @@
   - ARCH
   - CAD
   - APP
-- title: FPGA
+- title: ISFPGA
   year: 2025
   id: fpga25
   full_name: ACM/SIGDA International Symposium on Field-Programmable Gate Arrays
@@ -179,6 +179,18 @@
   end: '2026-05-26'
   sub:
   - ARCH
+- title: RAW
+  year: 2027
+  id: raw27
+  full_name: Reconfigurable Architectures Workshop
+  link: https://raw.necst.it/
+  deadline: TBA
+  abstract_deadline: TBA
+  timezone: TBA
+  place: TBA
+  date: TBA
+  sub:
+  - ARCH
 - title: ARC
   year: 2026
   id: arc26
@@ -298,6 +310,65 @@
   end: '2026-11-12'
   sub:
   - CAD
+- title: PACT
+  year: 2026
+  id: pact26
+  full_name: International Conference on Parallel Architectures and Compilation Techniques
+  link: https://pact2026.github.io/
+  deadline: '2026-04-30 23:59:59'
+  abstract_deadline: '2026-04-23 23:59:59'
+  timezone: UTC-12
+  place: Chicago, IL, USA
+  date: October 19-22, 2026
+  start: '2026-10-19'
+  end: '2026-10-22'
+  sub:
+  - ARCH
+  - APP
+- title: MLCAD
+  year: 2026
+  id: mlcad26
+  full_name: ACM/IEEE International Symposium on Machine Learning for CAD
+  link: https://mlcad.org/symposium/2026/
+  deadline: '2026-05-29 23:59:59'
+  abstract_deadline: '2026-05-29 23:59:59'
+  timezone: UTC-12
+  place: Parnas Hotel Jeju, Jeju Island, South Korea
+  date: September 7-9, 2026
+  start: '2026-09-07'
+  end: '2026-09-09'
+  sub:
+  - CAD
+- title: HiPEAC
+  year: 2027
+  id: hipeac27
+  full_name: International Conference on High Performance and Embedded Architectures and Compilers
+  link: https://www.hipeac.net/2027/glasgow/
+  deadline: '2026-06-01 23:59:59'
+  abstract_deadline: TBA
+  timezone: TBA
+  place: Glasgow, Scotland, UK
+  date: January 18-20, 2027
+  start: '2027-01-18'
+  end: '2027-01-20'
+  sub:
+  - ARCH
+  - APP
+- title: ICCD
+  year: 2026
+  id: iccd26
+  full_name: IEEE International Conference on Computer Design
+  link: https://iccd-conf.com/
+  deadline: '2026-06-10 23:59:59'
+  abstract_deadline: '2026-06-03 23:59:59'
+  timezone: UTC-12
+  place: Hong Kong
+  date: November 16-18, 2026
+  start: '2026-11-16'
+  end: '2026-11-18'
+  sub:
+  - ARCH
+  - CAD
 - title: FPT
   year: 2026
   id: fpt26
@@ -342,6 +413,20 @@
   end: '2027-03-24'
   sub:
   - ARCH
+- title: VLSI-D
+  year: 2027
+  id: vlsid27
+  full_name: International Conference on VLSI Design
+  link: https://vlsid.org/
+  deadline: '2026-08-07 23:59:00'
+  abstract_deadline: TBA
+  timezone: America/Los_Angeles
+  place: Bengaluru, India
+  date: TBA
+  start: TBA
+  end: TBA
+  sub:
+  - CAD
 - title: ASPLOS
   year: 2027
   id: asplos27
@@ -388,6 +473,21 @@
   - ARCH
   - CAD
   - APP
+- title: IPDPS
+  year: 2027
+  id: ipdps27
+  full_name: IEEE International Parallel and Distributed Processing Symposium
+  link: https://www.ipdps.org/
+  deadline: '2026-10-08 23:59:59'
+  abstract_deadline: '2026-10-01 23:59:59'
+  timezone: UTC-12
+  place: Seattle, WA, USA
+  date: June 1-5, 2027
+  start: '2027-06-01'
+  end: '2027-06-05'
+  sub:
+  - ARCH
+  - APP
 - title: ARC
   year: 2027
   id: arc27
@@ -404,12 +504,27 @@
   - ARCH
   - CAD
   - APP
+- title: MLSys
+  year: 2027
+  id: mlsys27
+  full_name: Conference on Machine Learning and Systems
+  link: https://mlsys.org/
+  deadline: '2026-10-30 23:59:59'
+  abstract_deadline: TBA
+  timezone: UTC
+  place: TBA
+  date: TBA
+  start: TBA
+  end: TBA
+  sub:
+  - ARCH
+  - APP
 - title: MWSCAS
   year: 2027
   id: mwscas27
   full_name: Midwest Symposium on Circuits and Systems
   link: https://www.mwscas.org/
-  deadline: '2027-04-01 00:00:00'
+  deadline: TBA
   abstract_deadline: TBA
   timezone: TBA
   place: TBA
@@ -434,3 +549,46 @@
   sub:
   - CAD
   - ARCH
+- title: ISPASS
+  year: 2027
+  id: ispass27
+  full_name: IEEE International Symposium on Performance Analysis of Systems and Software
+  link: https://www.ispass.org/
+  deadline: TBA
+  abstract_deadline: TBA
+  timezone: TBA
+  place: TBA
+  date: TBA
+  start: TBA
+  end: TBA
+  sub:
+  - ARCH
+  - APP
+- title: ISVLSI
+  year: 2027
+  id: isvlsi27
+  full_name: IEEE Computer Society Annual Symposium on VLSI
+  link: https://ieee-isvlsi.org/
+  deadline: TBA
+  abstract_deadline: TBA
+  timezone: TBA
+  place: TBA
+  date: TBA
+  start: TBA
+  end: TBA
+  sub:
+  - CAD
+- title: ICLAD
+  year: 2027
+  id: iclad27
+  full_name: IEEE International Conference on LLM-Aided Design
+  link: https://iclad.ai/
+  deadline: TBA
+  abstract_deadline: TBA
+  timezone: TBA
+  place: TBA
+  date: TBA
+  start: TBA
+  end: TBA
+  sub:
+  - CAD

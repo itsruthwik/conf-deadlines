@@ -11,11 +11,6 @@
     <div class="container">
         <div class="page-header">
             <div class="row">
-                <div class="col-12 col-sm-12">
-                  <h1>
-                    {{ site.title }} 
-                  </h1>
-                </div>
                 <div class="meta col-12">
                   {{ site.description }}.
                   To add/edit a conference, <a target="_blank" href="//github.com/{{ site.github_username }}/{{ site.github_repo }}">send in a pull request</a>.
@@ -61,13 +56,31 @@
                 </div>
               </form>
             </div>
-            <div class="row">
-              <div class="meta col-12">
-                <span class="local-timezone-hide">
-                  Deadlines are shown in <span class="local-timezone">America/New_York</span> time.
-                  To view them in conference website timezones, click on them.
-                </span>
+            <div class="row justify-content-center" style="margin-top: 10px;">
+              <div class="row align-items-md-center col-12 col-10-md">
+                <div class="col-12 col-md-5 filter-label">
+                  <label for="timezone-select" class="align-center" style="margin-bottom: 0px; line-height: 1.5;">
+                    Timezone:
+                  </label>
+                </div>
+                <div class="col-12 col-md-6">
+                  <select id="timezone-select" name="timezone-select" class="form-control">
+                    <option value="UTC-12">AoE (UTC-12)</option>
+                    <option value="America/New_York">New York</option>
+                    <option value="America/Chicago">Chicago</option>
+                    <option value="America/Los_Angeles">Los Angeles</option>
+                    <option value="America/Phoenix">Phoenix</option>
+                    <option value="Europe/London">London</option>
+                    <option value="Europe/Berlin">Berlin</option>
+                    <option value="Asia/Kolkata">Kolkata</option>
+                    <option value="Asia/Shanghai">Shanghai</option>
+                    <option value="Asia/Tokyo">Tokyo</option>
+                    <option value="local">Local timezone</option>
+                  </select>
+                </div>
               </div>
+            </div>
+            <div class="row">
               <div class="meta col-12">
                 You can optionally export all deadlines to
                 <a href="https://calendar.google.com/calendar/r?cid={{ site.domain }}{{ site.baseurl }}/fpga-deadlines.ics">Google Calendar</a> or
@@ -76,23 +89,21 @@
             </div>
         </div>
         <div id="confs">
-        <h1 id="next-30-days-title" style="padding-bottom: 15px; border-bottom: 2px solid #2e86de; margin-top: 20px;">Next 30 Days</h1>
+        <h1 id="next-30-days-title" style="margin-top: 20px;">Next 30 Days</h1>
         <div id="next_30_confs"></div>
-        <h1 id="all-deadlines-title" style="padding-bottom: 15px; border-bottom: 2px solid #2e86de; margin-top: 20px;">All Deadlines</h1>
+        <h1 id="all-deadlines-title" style="margin-top: 20px;">All Deadlines</h1>
         <div id="coming_confs">
           {% for conf in site.data.conferences %}
           <div id="{{conf.id}}" class="ConfItem {% for sub in conf.sub %} {{sub}}-conf {% endfor %}">
             <div class="row conf-row">
                 <div class="col-6">
                   <span class="conf-title">
-                      <a title="{% if conf.full_name %}{{conf.full_name}}{% else %}Deadline{% endif %} Details" href="{{site.baseurl}}/conference?id={{ conf.id }}">{{conf.title}} {{conf.year}}</a>
+                      <a title="{% if conf.full_name %}{{conf.full_name}}{% else %}Conference Website{% endif %}" href="{{conf.link}}" target="_blank">{{conf.title}} {{conf.year}}</a>
                   </span>
                   <span class="conf-title-small">
-                      <a title="{% if conf.full_name %}{{conf.full_name}}{% else %}Deadline{% endif %} Details" href="{{site.baseurl}}/conference?id={{ conf.id }}">{{conf.title}} '{{conf.year | slice: -2, 3}}</a>
+                      <a title="{% if conf.full_name %}{{conf.full_name}}{% else %}Conference Website{% endif %}" href="{{conf.link}}" target="_blank">{{conf.title}} '{{conf.year | slice: -2, 3}}</a>
                   </span>
                   <span class="conf-title-icon">
-                    <a title="Conference Website" href="{{conf.link}}" target="_blank"><img src="{{site.baseurl}}/static/img/203-earth.svg" class="badge-link" alt="Link to Conference Website" /></a>
-                    &ZeroWidthSpace;
                     {% if conf.paperslink %}
                       <a title="Full List of Accepted Papers" href="{{conf.paperslink}}" target="_blank"><img src="{{site.baseurl}}/static/img/033-books.svg" class="badge-link" alt="Full List of Accepted Papers" /></a>
                     {% endif %}
@@ -139,7 +150,6 @@
                 {% endfor %}
               </div>
             </div>
-            <hr>
           </div>
           {% endfor %}
         </div>
@@ -169,13 +179,38 @@
 
         addUtcTimeZones();
 
+        var local_timezone = "America/New_York";
         try {
-          var local_timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-          $('.local-timezone').text(local_timezone.toString());
+          local_timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
         }
-        catch(err) {
-          $('.local-timezone-hide').hide();
+        catch(err) {}
+
+        var selected_timezone = store.get("{{site.domain}}-timezone");
+        if (!selected_timezone) {
+          selected_timezone = "UTC-12";
         }
+        $("#timezone-select").val(selected_timezone);
+
+        var confDates = {};
+
+        function renderDeadlineTimes() {
+          var tz = selected_timezone === "local" ? local_timezone : selected_timezone;
+          for (var id in confDates) {
+            try {
+              var d = moment.tz(confDates[id], tz);
+              $('#' + id + ' .deadline-time').html(d.toString());
+            }
+            catch(err) {
+              console.log("Error converting to timezone.");
+            }
+          }
+        }
+
+        $("#timezone-select").on("change", function () {
+          selected_timezone = $(this).val();
+          store.set("{{site.domain}}-timezone", selected_timezone);
+          renderDeadlineTimes();
+        });
 
         {% for conf in site.data.conferences %}
         {% for sub in conf.sub %}
@@ -192,6 +227,7 @@
             timezone = "UTC-12";
           }
           var confDate = moment.tz("{{conf.deadline}}", timezone);
+          confDates['{{conf.id}}'] = confDate;
 
           // render countdown timer
           $('#{{conf.id}} .timer').countdown(confDate.toDate(), function (event) {
@@ -203,13 +239,13 @@
               $(this).html(event.strftime('%Dd %H:%M:%S'));
           });
 
-          // convert deadline to local timezone
+          // convert deadline to selected timezone
           try {
-            var localConfDate = moment.tz(confDate, local_timezone);
-            $('#{{conf.id}} .deadline-time').html(localConfDate.toString());
+            var displayConfDate = moment.tz(confDate, selected_timezone === "local" ? local_timezone : selected_timezone);
+            $('#{{conf.id}} .deadline-time').html(displayConfDate.toString());
           }
           catch(err) {
-            console.log("Error converting to local timezone.");
+            console.log("Error converting to selected timezone.");
           }
 
           // add calendar button
@@ -296,7 +332,7 @@
         // TBA toggle functionality
         var showTBA = store.get("{{site.domain}}-showTBA");
         if (showTBA === null || showTBA === undefined) {
-          showTBA = true; // Default to showing TBA
+          showTBA = false; // Default to hiding TBA
         }
         $("#show-tba").prop("checked", showTBA);
 
