@@ -45,6 +45,20 @@
   - ARCH
   - CAD
   - APP
+- title: ASP-DAC
+  year: 2026
+  id: aspdac26
+  full_name: Asia and South Pacific Design Automation Conference
+  link: https://aspdac.com/
+  deadline: '2025-07-11 17:00:00'
+  abstract_deadline: '2025-07-04 17:00:00'
+  timezone: UTC-12
+  place: Hong Kong, China
+  date: January 19-22, 2026
+  start: '2026-01-19'
+  end: '2026-01-22'
+  sub:
+  - CAD
 - title: FPT
   year: 2025
   id: fpt25
@@ -60,6 +74,36 @@
   sub:
   - ARCH
   - CAD
+  - APP
+- title: ASPLOS
+  year: 2026
+  id: asplos26
+  full_name: Architectural Support for Programming Languages and Operating Systems
+  link: https://www.asplos-conference.org/
+  deadline: '2025-08-20 23:59:59'
+  abstract_deadline: '2025-08-13 23:59:59'
+  timezone: America/New_York
+  place: Pittsburgh, USA
+  date: March 22-26, 2026
+  start: '2026-03-22'
+  end: '2026-03-26'
+  sub:
+  - ARCH
+- title: DATE
+  year: 2026
+  id: date26
+  full_name: Design, Automation and Test in Europe Conference
+  link: https://www.date-conference.com/
+  deadline: '2025-09-14 23:59:59'
+  abstract_deadline: '2025-09-07 23:59:59'
+  timezone: UTC-12
+  place: Verona, Italy
+  date: April 20-22, 2026
+  start: '2026-04-20'
+  end: '2026-04-22'
+  sub:
+  - CAD
+  - ARCH
   - APP
 - title: ISFPGA
   year: 2026
@@ -77,6 +121,35 @@
   - ARCH
   - CAD
   - APP
+- title: ISCA
+  year: 2026
+  id: isca26
+  full_name: International Symposium on Computer Architecture
+  link: https://iscaconf.org/
+  deadline: '2025-11-17 23:59:59'
+  abstract_deadline: '2025-11-10 23:59:59'
+  timezone: UTC-12
+  place: Raleigh, NC, USA
+  date: June 27 - July 1, 2026
+  start: '2026-06-27'
+  end: '2026-07-01'
+  sub:
+  - ARCH
+- title: DAC
+  year: 2026
+  id: dac26
+  full_name: Design Automation Conference
+  link: https://www.dac.com/
+  deadline: '2025-11-19 23:59:59'
+  abstract_deadline: '2025-11-11 23:59:59'
+  timezone: America/Los_Angeles
+  place: Long Beach, CA, USA
+  date: July 26-29, 2026
+  start: '2026-07-26'
+  end: '2026-07-29'
+  sub:
+  - CAD
+  - ARCH
 - title: FCCM
   year: 2026
   id: fccm26
@@ -197,6 +270,20 @@
   - ARCH
   - CAD
   - APP
+- title: MICRO
+  year: 2026
+  id: micro26
+  full_name: International Symposium on Microarchitecture
+  link: https://microarch.org/
+  deadline: '2026-04-07 23:59:59'
+  abstract_deadline: '2026-03-31 23:59:59'
+  timezone: America/New_York
+  place: Athens, Greece
+  date: October 31 - November 4, 2026
+  start: '2026-10-31'
+  end: '2026-11-04'
+  sub:
+  - ARCH
 - title: ICCAD
   year: 2026
   id: iccad26
@@ -332,93 +419,6 @@
   sub:
   - ARCH
   - CAD
-- title: ISCA
-  year: 2026
-  id: isca26
-  full_name: International Symposium on Computer Architecture
-  link: https://iscaconf.org/
-  deadline: TBA
-  abstract_deadline: TBA
-  timezone: TBA
-  place: Raleigh, TBA, USA
-  date: June TBA-TBA, 2026
-  start: TBA
-  end: TBA
-  sub:
-  - ARCH
-- title: ASPLOS
-  year: 2026
-  id: asplos26
-  full_name: Architectural Support for Programming Languages and Operating Systems
-  link: https://www.asplos-conference.org/
-  deadline: TBA
-  abstract_deadline: TBA
-  timezone: TBA
-  place: Pittsburgh, USA
-  date: March 22-26, 2026
-  start: '2026-03-22'
-  end: '2026-03-26'
-  sub:
-  - ARCH
-- title: MICRO
-  year: 2026
-  id: micro26
-  full_name: International Symposium on Microarchitecture
-  link: https://microarch.org/
-  deadline: TBA
-  abstract_deadline: TBA
-  timezone: TBA
-  place: Athens, Greece
-  date: October 31 - November 4, 2026
-  start: '2026-10-31'
-  end: '2026-11-04'
-  sub:
-  - ARCH
-- title: ASP-DAC
-  year: 2026
-  id: aspdac26
-  full_name: Asia and South Pacific Design Automation Conference
-  link: https://aspdac.com/
-  deadline: TBA
-  abstract_deadline: TBA
-  timezone: TBA
-  place: TBA
-  date: TBA
-  start: TBA
-  end: TBA
-  sub:
-  - CAD
-- title: DATE
-  year: 2026
-  id: date26
-  full_name: Design, Automation and Test in Europe Conference
-  link: https://www.date-conference.com/
-  deadline: TBA
-  abstract_deadline: TBA
-  timezone: TBA
-  place: Verona, Italy
-  date: April 20-22, 2026
-  start: '2026-04-20'
-  end: '2026-04-22'
-  sub:
-  - CAD
-  - ARCH
-  - APP
-- title: DAC
-  year: 2026
-  id: dac26
-  full_name: Design Automation Conference
-  link: https://www.dac.com/
-  deadline: TBA
-  abstract_deadline: TBA
-  timezone: TBA
-  place: Long Beach, CA, USA
-  date: July 26-29, 2026
-  start: '2026-07-26'
-  end: '2026-07-29'
-  sub:
-  - CAD
-  - ARCH
 - title: DAC
   year: 2027
   id: dac27
