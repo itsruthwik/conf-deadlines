@@ -32,7 +32,7 @@
   (function () {
     var theme = store.get("{{site.domain}}-theme");
     if (theme !== "dark" && theme !== "light") {
-      theme = "dark";
+      theme = "light";
     }
     document.documentElement.setAttribute("data-theme", theme);
   })();
