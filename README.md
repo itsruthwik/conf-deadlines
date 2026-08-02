@@ -1,12 +1,10 @@
-## Conf Deadlines [![Build Status](https://travis-ci.com/itsruthwik/conf-deadlines.svg?branch=gh-pages)](https://travis-ci.com/itsruthwik/conf-deadlines)
+## Conf Deadlines
 
 Countdown timers to keep track of a bunch of conference deadlines. Forked from [ai-deadlines][2].
 
 ## Contributing
 
 Contributions are very welcome!
-
-To keep things minimal, I'm only looking to list top-tier conferences in FPGA as per [conferenceranks.com][6] and my judgement calls. Please feel free to maintain a separate fork if you don't see your sub-field or conference of interest listed.
 
 To add or update a deadline:
 - Fork the repository
