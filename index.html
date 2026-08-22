@@ -213,6 +213,16 @@
         {% if conf.deadline == "TBA" %}
           $('#{{conf.id}} .timer').html("TBA");
           $('#{{conf.id}} .deadline-time').html("TBA");
+          {% if conf.last_deadline %}
+          // No confirmed deadline yet: approximate the sort position from last
+          // year's deadline (projected to its next upcoming month/day).
+          var lastDl = moment.tz("{{conf.last_deadline}}", "UTC-12");
+          var projected = lastDl.clone().year(moment().year());
+          if (projected.isBefore(moment())) {
+            projected.add(1, 'year');
+          }
+          $('#{{conf.id}}').attr("diff", moment().diff(projected));
+          {% endif %}
         {% else %}
           // adjust date according to deadline timezone
           var timezone = "{% if conf.timezone %}{{conf.timezone}}{% else %}UTC-12{% endif %}";

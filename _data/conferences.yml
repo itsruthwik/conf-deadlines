@@ -677,13 +677,25 @@
   sub:
   - ARCH
   - APP
-- title: ASPLOS
+- title: ASPLOS (Fall)
   year: 2027
-  id: asplos27
-  full_name: Architectural Support for Programming Languages and Operating Systems
-  link: https://www.asplos-conference.org/
+  id: asplosfall27
+  full_name: Architectural Support for Programming Languages and Operating Systems (Fall submission cycle)
+  link: https://www.asplos-conference.org/asplos2027/cfp/
   deadline: '2026-09-09 23:59:59'
-  abstract_deadline: TBA
+  timezone: UTC-12
+  place: Heraklion, Crete, Greece
+  date: April 11-15, 2027
+  start: '2027-04-11'
+  end: '2027-04-15'
+  sub:
+  - ARCH
+- title: ASPLOS (Spring)
+  year: 2027
+  id: asplosspring27
+  full_name: Architectural Support for Programming Languages and Operating Systems (Spring submission cycle)
+  link: https://www.asplos-conference.org/asplos2027/cfp/
+  deadline: '2026-04-15 23:59:59'
   timezone: UTC-12
   place: Heraklion, Crete, Greece
   date: April 11-15, 2027
@@ -781,6 +793,7 @@
   date: TBA
   sub:
   - ARCH
+  last_deadline: '2026-02-07 23:59:59'
 - title: MWSCAS
   year: 2027
   id: mwscas27
@@ -796,6 +809,7 @@
   sub:
   - ARCH
   - CAD
+  last_deadline: '2026-03-30 23:59:59'
 - title: DAC
   year: 2027
   id: dac27
@@ -811,6 +825,7 @@
   sub:
   - CAD
   - ARCH
+  last_deadline: '2025-11-19 17:00:00'
 - title: ISPASS
   year: 2027
   id: ispass27
@@ -826,6 +841,7 @@
   sub:
   - ARCH
   - APP
+  last_deadline: '2025-12-15 17:00:00'
 - title: ISVLSI
   year: 2027
   id: isvlsi27
@@ -840,6 +856,7 @@
   end: TBA
   sub:
   - CAD
+  last_deadline: '2026-03-15 23:59:59'
 - title: ICLAD
   year: 2027
   id: iclad27
@@ -869,18 +886,33 @@
   sub:
   - ARCH
   - APP
-- title: EuroSys
-  year: 2026
-  id: eurosys26
-  full_name: EuroSys Conference
-  link: https://2026.eurosys.org/
-  deadline: TBA
-  abstract_deadline: TBA
-  timezone: TBA
-  place: Edinburgh, UK
-  date: April 27-30, 2026
-  start: '2026-04-27'
-  end: '2026-04-30'
+- title: EuroSys (Fall)
+  year: 2027
+  id: eurosysfall27
+  full_name: EuroSys Conference (Fall submission cycle)
+  link: https://2027.eurosys.org/
+  deadline: '2026-09-24 23:59:59'
+  abstract_deadline: '2026-09-17 23:59:59'
+  timezone: UTC-12
+  place: Morocco
+  date: TBA
+  start: TBA
+  end: TBA
+  sub:
+  - ARCH
+  - APP
+- title: EuroSys (Spring)
+  year: 2027
+  id: eurosysspring27
+  full_name: EuroSys Conference (Spring submission cycle)
+  link: https://2027.eurosys.org/
+  deadline: '2026-05-15 07:59:59'
+  abstract_deadline: '2026-05-08 07:59:59'
+  timezone: America/New_York
+  place: Morocco
+  date: TBA
+  start: TBA
+  end: TBA
   sub:
   - ARCH
   - APP
@@ -929,17 +961,17 @@
   - ARCH
   - CAD
 - title: ICPE
-  year: 2026
-  id: icpe26
+  year: 2027
+  id: icpe27
   full_name: ACM/SPEC International Conference on Performance Engineering
-  link: https://icpe2026.spec.org/
+  link: https://icpe2027.spec.org/
   deadline: TBA
   abstract_deadline: TBA
   timezone: TBA
-  place: TBA
-  date: TBA
-  start: TBA
-  end: TBA
+  place: Gothenburg, Sweden
+  date: May 24-28, 2027
+  start: '2027-05-24'
+  end: '2027-05-28'
   sub:
   - APP
 - title: ICPP
@@ -977,13 +1009,12 @@
   id: iscas27
   full_name: IEEE International Symposium on Circuits and Systems
   link: https://2027.ieee-iscas.org/
-  deadline: TBA
-  abstract_deadline: TBA
-  timezone: TBA
-  place: TBA
-  date: TBA
-  start: TBA
-  end: TBA
+  deadline: '2026-10-13 23:59:59'
+  timezone: UTC-12
+  place: Bordeaux, France
+  date: June 6-9, 2027
+  start: '2027-06-06'
+  end: '2027-06-09'
   sub:
   - CAD
   - ARCH
@@ -1035,26 +1066,26 @@
   id: lascas27
   full_name: IEEE Latin American Symposium on Circuits and Systems
   link: https://attend.ieee.org/lascas-2027/
-  deadline: TBA
-  abstract_deadline: TBA
-  timezone: TBA
-  place: TBA
-  date: TBA
-  start: TBA
-  end: TBA
+  deadline: '2026-09-01 23:59:59'
+  timezone: UTC-12
+  place: Panama City, Panama
+  date: February 23-26, 2027
+  start: '2027-02-23'
+  end: '2027-02-26'
   sub:
   - CAD
 - title: Euromicro-PDP
-  year: 2026
-  id: pdp26
+  year: 2027
+  id: pdp27
   full_name: Euromicro International Conference on Parallel, Distributed, and Network-Based Processing
-  link: https://www.pdp2026.org/
-  deadline: TBA
-  timezone: TBA
-  place: Cluj-Napoca, Romania
-  date: March 25-27, 2026
-  start: '2026-03-25'
-  end: '2026-03-27'
+  link: https://www.pdp2027.org/
+  deadline: '2026-10-26 23:59:59'
+  abstract_deadline: '2026-10-19 23:59:59'
+  timezone: UTC-12
+  place: Barcelona, Spain
+  date: March 17-19, 2027
+  start: '2027-03-17'
+  end: '2027-03-19'
   sub:
   - ARCH
   - APP
