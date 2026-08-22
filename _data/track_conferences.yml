@@ -102,3 +102,281 @@
   full_name: High-Performance Computer Architecture
   link: https://hpca-conf.org/
   sub: ['ARCH']
+
+# --- Added from venues.txt (2026/2027 cleanup) ---
+
+- id: arcs
+  title: ARCS
+  full_name: GI/ITG International Conference on Architecture of Computing Systems
+  link: https://arcs-conference.org/
+  sub: ['ARCH']
+
+- id: arith
+  title: ARITH
+  full_name: IEEE Symposium on Computer Arithmetic
+  link: https://arithsymposium.org/
+  sub: ['ARCH']
+
+- id: cases
+  title: CASES
+  full_name: International Conference on Compilers, Architectures and Synthesis for Embedded Systems
+  link: https://esweek.org/cases/
+  sub: ['ARCH', 'CAD', 'APP']
+
+- id: codesisss
+  title: CODES-ISSS
+  full_name: International Conference on Hardware/Software Codesign and System Synthesis
+  link: https://esweek.org/codes-isss/
+  sub: ['CAD', 'ARCH']
+
+- id: emsoft
+  title: EMSOFT
+  full_name: International Conference on Embedded Software
+  link: https://esweek.org/emsoft/
+  sub: ['ARCH', 'APP']
+
+- id: europar
+  title: Euro-Par
+  full_name: International European Conference on Parallel and Distributed Computing
+  link: https://2026.euro-par.org/
+  sub: ['ARCH', 'APP']
+
+- id: eurosys
+  title: EuroSys
+  full_name: EuroSys Conference
+  link: https://2026.eurosys.org/
+  sub: ['ARCH', 'APP']
+
+- id: dsd
+  title: Euromicro-DSD
+  full_name: Euromicro Conference on Digital System Design
+  link: https://dsd-seaa.com/dsd2026/
+  sub: ['CAD', 'ARCH']
+
+- id: pdp
+  title: Euromicro-PDP
+  full_name: Euromicro International Conference on Parallel, Distributed, and Network-Based Processing
+  link: https://www.pdp2026.org/
+  sub: ['ARCH', 'APP']
+
+- id: heart
+  title: HEART
+  full_name: International Symposium on Highly Efficient Accelerators and Reconfigurable Technologies
+  link: https://heart2026.github.io/
+  sub: ['ARCH', 'APP']
+
+- id: host
+  title: HOST
+  full_name: IEEE International Symposium on Hardware Oriented Security and Trust
+  link: https://host.conferences.computer.org/2026/
+  sub: ['ARCH', 'CAD']
+
+- id: hipc
+  title: HiPC
+  full_name: IEEE International Conference on High Performance Computing, Data, and Analytics
+  link: https://hipc.org/
+  sub: ['ARCH', 'APP']
+
+- id: hipeac
+  title: HiPEAC
+  full_name: International Conference on High Performance and Embedded Architecture and Compilation
+  link: https://www.hipeac.net/
+  sub: ['ARCH']
+
+- id: ic2e
+  title: IC2E
+  full_name: IEEE International Conference on Cloud Engineering
+  link: https://conferences.computer.org/IC2E/2026/
+  sub: ['APP']
+
+- id: iccd
+  title: ICCD
+  full_name: IEEE International Conference on Computer Design
+  link: https://www.iccd-conf.com/
+  sub: ['ARCH', 'CAD']
+
+- id: iclad
+  title: ICLAD
+  full_name: IEEE International Conference on LLM-Aided Design
+  link: https://iclad.ai/
+  sub: ['CAD']
+
+- id: icpads
+  title: ICPADS
+  full_name: IEEE International Conference on Parallel and Distributed Systems
+  link: https://www.cloud-conf.net/icpads2026/
+  sub: ['ARCH', 'APP']
+
+- id: icpe
+  title: ICPE
+  full_name: ACM/SPEC International Conference on Performance Engineering
+  link: https://icpe2026.spec.org/
+  sub: ['APP']
+
+- id: icpp
+  title: ICPP
+  full_name: International Conference on Parallel Processing
+  link: https://icpp2026.github.io/
+  sub: ['ARCH', 'APP']
+
+- id: ics
+  title: ICS
+  full_name: ACM International Conference on Supercomputing
+  link: https://www.ics-conference.org/
+  sub: ['ARCH', 'APP']
+
+- id: igsc
+  title: IGSC
+  full_name: International Green and Sustainable Computing Conference
+  link: https://www.igscc.org/
+  sub: ['ARCH', 'APP']
+
+- id: iiswc
+  title: IISWC
+  full_name: IEEE International Symposium on Workload Characterization
+  link: https://iiswc.org/
+  sub: ['ARCH', 'APP']
+
+- id: ipdps
+  title: IPDPS
+  full_name: IEEE International Parallel & Distributed Processing Symposium
+  link: https://www.ipdps.org/
+  sub: ['ARCH', 'APP']
+
+- id: iscas
+  title: ISCAS
+  full_name: IEEE International Symposium on Circuits and Systems
+  link: https://2027.ieee-iscas.org/
+  sub: ['CAD', 'ARCH']
+
+- id: isicas
+  title: ISICAS
+  full_name: IEEE International Symposium on Integrated Circuits and Systems
+  link: https://2026.ieee-isicas.org/
+  sub: ['CAD']
+
+- id: islped
+  title: ISLPED
+  full_name: ACM/IEEE International Symposium on Low Power Electronics and Design
+  link: https://www.islped.org/
+  sub: ['CAD', 'ARCH']
+
+- id: ispass
+  title: ISPASS
+  full_name: IEEE International Symposium on Performance Analysis of Systems and Software
+  link: https://ispass.org/
+  sub: ['ARCH', 'APP']
+
+- id: isqed
+  title: ISQED
+  full_name: International Symposium on Quality Electronic Design
+  link: https://www.isqed.org/
+  sub: ['CAD']
+
+- id: isvlsi
+  title: ISVLSI
+  full_name: IEEE Computer Society Annual Symposium on VLSI
+  link: https://ieee-isvlsi.github.io/
+  sub: ['CAD', 'ARCH']
+
+- id: fastml
+  title: FastML
+  full_name: Fast Machine Learning for Science Conference
+  link: https://fastmachinelearning.org/
+  sub: ['APP']
+
+- id: lascas
+  title: LASCAS
+  full_name: IEEE Latin American Symposium on Circuits and Systems
+  link: https://attend.ieee.org/lascas-2027/
+  sub: ['CAD']
+
+- id: mlcad
+  title: MLCAD
+  full_name: ACM/IEEE International Symposium on Machine Learning for CAD
+  link: https://mlcad.org/symposium/
+  sub: ['CAD']
+
+- id: mlsys
+  title: MLSys
+  full_name: Conference on Machine Learning and Systems
+  link: https://mlsys.org/
+  sub: ['ARCH', 'APP']
+
+- id: newcas
+  title: NEWCAS
+  full_name: IEEE International NEWCAS Conference
+  link: https://newcas.org/
+  sub: ['CAD']
+
+- id: pact
+  title: PACT
+  full_name: International Conference on Parallel Architectures and Compilation Techniques
+  link: https://pact2026.github.io/
+  sub: ['ARCH', 'APP']
+
+- id: rtas
+  title: RTAS
+  full_name: IEEE Real-Time and Embedded Technology and Applications Symposium
+  link: https://2026.rtas.org/
+  sub: ['ARCH', 'APP']
+
+- id: sbacpad
+  title: SBAC-PAD
+  full_name: International Symposium on Computer Architecture and High Performance Computing
+  link: https://coco-arcos.github.io/sbac-pad2026/
+  sub: ['ARCH', 'APP']
+
+- id: sbcci
+  title: SBCCI
+  full_name: Symposium on Integrated Circuits and Systems Design
+  link: https://www.psi.poli.usp.br/chipinsampa/sbcci2026/
+  sub: ['CAD']
+
+- id: sc
+  title: SC
+  full_name: International Conference for High Performance Computing, Networking, Storage, and Analysis
+  link: https://sc26.supercomputing.org/
+  sub: ['ARCH', 'APP']
+
+- id: socc
+  title: SOCC
+  full_name: IEEE International System-on-Chip Conference
+  link: https://www.ieee-socc.org/
+  sub: ['CAD', 'ARCH']
+
+- id: spaa
+  title: SPAA
+  full_name: ACM Symposium on Parallelism in Algorithms and Architectures
+  link: https://spaa.acm.org/
+  sub: ['ARCH', 'APP']
+
+- id: sensys
+  title: SenSys
+  full_name: ACM Conference on Embedded Networked Sensor Systems
+  link: https://sensys.acm.org/2026/
+  sub: ['APP']
+
+- id: syscon
+  title: SysCon
+  full_name: IEEE International Systems Conference
+  link: https://2026.ieeesyscon.org/
+  sub: ['APP']
+
+- id: vlsid
+  title: VLSI-D
+  full_name: International Conference on VLSI Design and Embedded Systems
+  link: https://vlsid.org/
+  sub: ['CAD', 'ARCH']
+
+- id: vlsisoc
+  title: VLSI-SoC
+  full_name: IFIP/IEEE International Conference on Very Large Scale Integration
+  link: https://vlsi-soc.com/
+  sub: ['CAD', 'ARCH']
+
+- id: vlsitsa
+  title: VLSI-TSA
+  full_name: International VLSI Symposium on Technology, Systems and Applications
+  link: https://expo.itri.org.tw/2026VLSITSA
+  sub: ['CAD']
