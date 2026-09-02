@@ -470,12 +470,13 @@ footer a {
   font-weight: 500;
   margin-left: 8px;
   vertical-align: middle;
-  border-bottom: none;
+  text-decoration: underline;
   white-space: nowrap;
 }
 
 .nav-icons .repo-link:hover {
   color: #fff;
+  text-decoration: underline;
 }
 
 /* ---- calendar widget ---- */
