@@ -519,13 +519,13 @@
   id: eurosysspring27
   full_name: EuroSys Conference (Spring submission cycle)
   link: https://2027.eurosys.org/
-  deadline: '2026-05-15 07:59:59'
-  abstract_deadline: '2026-05-08 07:59:59'
-  timezone: America/New_York
-  place: Morocco
-  date: TBA
-  start: TBA
-  end: TBA
+  deadline: '2026-05-14 23:59:59'
+  abstract_deadline: '2026-05-07 23:59:59'
+  timezone: UTC-12
+  place: Rabat, Morocco
+  date: April 19-23, 2027
+  start: '2027-04-19'
+  end: '2027-04-23'
   sub:
   - ARCH
   - APP
@@ -756,10 +756,10 @@
   deadline: '2026-09-24 23:59:59'
   abstract_deadline: '2026-09-17 23:59:59'
   timezone: UTC-12
-  place: Morocco
-  date: TBA
-  start: TBA
-  end: TBA
+  place: Rabat, Morocco
+  date: April 19-23, 2027
+  start: '2027-04-19'
+  end: '2027-04-23'
   sub:
   - ARCH
   - APP
