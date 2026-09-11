@@ -133,6 +133,11 @@
                   <div>Deadline:
                     <span class="deadline-time"></span>
                   </div>
+                  {% if conf.abstract_deadline %}
+                  <div>Abstract:
+                    <span class="abstract-deadline-time"></span>
+                  </div>
+                  {% endif %}
                 </div>
                 <div class="calendar"></div>
               </div>
@@ -186,16 +191,46 @@
         $("#timezone-select").val(selected_timezone);
 
         var confDates = {};
+        // Abstract deadlines are display-only (shown under the main deadline).
+        // They do not drive countdown timers, sorting, or the 30-day grouping.
+        var abstractDates = {};
+
+        // Map timezone-select values to their dropdown labels, e.g.
+        // "UTC-12" -> "AoE (UTC-12)". Used for the deadline timezone suffix.
+        var tzLabels = {};
+        $("#timezone-select option").each(function () {
+          tzLabels[$(this).val()] = $(this).text().trim();
+        });
+        function tzLabel() {
+          return tzLabels[selected_timezone] || selected_timezone;
+        }
+        // Main deadline: date + time (no seconds) + dropdown timezone label.
+        function formatDeadline(m) {
+          return m.format("ddd MMM D YYYY HH:mm") + " " + tzLabel();
+        }
+        // Abstract deadline: date only (no time, no timezone).
+        function formatAbstract(m) {
+          return m.format("ddd MMM D YYYY");
+        }
 
         function renderDeadlineTimes() {
           var tz = selected_timezone === "local" ? local_timezone : selected_timezone;
           for (var id in confDates) {
             try {
               var d = moment.tz(confDates[id], tz);
-              $('#' + id + ' .deadline-time').html(d.toString());
+              $('#' + id + ' .deadline-time').html(formatDeadline(d));
             }
             catch(err) {
               console.log("Error converting to timezone.");
+            }
+          }
+          for (var aid in abstractDates) {
+            try {
+              var ad = moment.tz(abstractDates[aid], tz);
+              $('#' + aid + ' .abstract-deadline-time').html(formatAbstract(ad));
+            }
+            catch(err) {
+              console.log("Error converting abstract deadline to timezone.");
             }
           }
         }
@@ -235,18 +270,18 @@
 
           // render countdown timer
           $('#{{conf.id}} .timer').countdown(confDate.toDate(), function (event) {
-              $(this).html(event.strftime('%D days %Hh %Mm %Ss'));
+              $(this).html(event.strftime('%D days %Hh %Mm'));
           });
 
           // render countdown timer small
           $('#{{conf.id}} .timer-small').countdown(confDate.toDate(), function (event) {
-              $(this).html(event.strftime('%Dd %H:%M:%S'));
+              $(this).html(event.strftime('%Dd %H:%M'));
           });
 
           // convert deadline to selected timezone
           try {
             var displayConfDate = moment.tz(confDate, selected_timezone === "local" ? local_timezone : selected_timezone);
-            $('#{{conf.id}} .deadline-time').html(displayConfDate.toString());
+            $('#{{conf.id}} .deadline-time').html(formatDeadline(displayConfDate));
           }
           catch(err) {
             console.log("Error converting to selected timezone.");
@@ -273,6 +308,27 @@
             $('#{{conf.id}} .timer-small').replaceWith($('#{{conf.id}} .deadline'));
             $('#{{conf.id}} .calendar').remove();
           }
+        {% endif %}
+
+        {% if conf.abstract_deadline %}
+          // Abstract deadline: display-only, shown under the main deadline.
+          {% if conf.abstract_deadline == "TBA" %}
+            $('#{{conf.id}} .abstract-deadline-time').html("TBA");
+          {% else %}
+            var abstractTimezone = "{% if conf.timezone %}{{conf.timezone}}{% else %}UTC-12{% endif %}";
+            if (abstractTimezone === "TBA" || abstractTimezone === "") {
+              abstractTimezone = "UTC-12";
+            }
+            var abstractDate = moment.tz("{{conf.abstract_deadline}}", abstractTimezone);
+            abstractDates['{{conf.id}}'] = abstractDate;
+            try {
+              var displayAbstractDate = moment.tz(abstractDate, selected_timezone === "local" ? local_timezone : selected_timezone);
+              $('#{{conf.id}} .abstract-deadline-time').html(formatAbstract(displayAbstractDate));
+            }
+            catch(err) {
+              console.log("Error converting abstract deadline to selected timezone.");
+            }
+          {% endif %}
         {% endif %}
         {% endfor %}
 
