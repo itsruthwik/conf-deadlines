@@ -121,20 +121,6 @@
   - ARCH
   - CAD
   - APP
-- title: RTAS
-  year: 2026
-  id: rtas26
-  full_name: IEEE Real-Time and Embedded Technology and Applications Symposium
-  link: https://2026.rtas.org/
-  deadline: '2025-11-13 23:59:59'
-  timezone: UTC-12
-  place: Saint Malo, France
-  date: May 12-14, 2026
-  start: '2026-05-12'
-  end: '2026-05-14'
-  sub:
-  - ARCH
-  - APP
 - title: ISCA
   year: 2026
   id: isca26
@@ -236,20 +222,6 @@
   end: '2026-07-01'
   sub:
   - ARCH
-- title: SenSys
-  year: 2026
-  id: sensys26
-  full_name: ACM Conference on Embedded Networked Sensor Systems
-  link: https://sensys.acm.org/2026/
-  deadline: '2026-02-20 23:59:59'
-  abstract_deadline: '2025-11-13 23:59:59'
-  timezone: UTC-12
-  place: Saint-Malo, France
-  date: May 11-14, 2026
-  start: '2026-05-11'
-  end: '2026-05-14'
-  sub:
-  - APP
 - title: ARC
   year: 2026
   id: arc26
@@ -456,19 +428,6 @@
   end: '2027-04-15'
   sub:
   - ARCH
-- title: SBCCI
-  year: 2026
-  id: sbcci26
-  full_name: Symposium on Integrated Circuits and Systems Design
-  link: https://www.psi.poli.usp.br/chipinsampa/sbcci2026/
-  deadline: '2026-04-21 23:59:59'
-  timezone: UTC-12
-  place: São Paulo, Brazil
-  date: TBA
-  start: TBA
-  end: TBA
-  sub:
-  - CAD
 - title: PACT
   year: 2026
   id: pact26
@@ -826,20 +785,6 @@
   sub:
   - ARCH
   - APP
-- title: ICPE
-  year: 2027
-  id: icpe27
-  full_name: ACM/SPEC International Conference on Performance Engineering
-  link: https://icpe2027.spec.org/
-  deadline: '2026-11-16 23:59:59'
-  abstract_deadline: '2026-11-09 23:59:59'
-  timezone: UTC-12
-  place: Gothenburg, Sweden
-  date: May 24-28, 2027
-  start: '2027-05-24'
-  end: '2027-05-28'
-  sub:
-  - APP
 - title: ISCA
   year: 2027
   id: isca27
@@ -881,21 +826,6 @@
   start: '2027-04-12'
   end: '2027-04-15'
   sub:
-  - APP
-- title: ICS
-  year: 2027
-  id: ics27
-  full_name: ACM International Conference on Supercomputing
-  link: https://www.ics-conference.org/
-  deadline: '2026-12-07 23:59:59'
-  abstract_deadline: '2026-12-01 23:59:59'
-  timezone: UTC-12
-  place: Atlanta, Georgia, USA
-  date: June 5-11, 2027
-  start: '2027-06-05'
-  end: '2027-06-11'
-  sub:
-  - ARCH
   - APP
 - title: ISPASS
   year: 2027
@@ -1041,21 +971,6 @@
   sub:
   - ARCH
   - APP
-- title: HOST
-  year: 2026
-  id: host26
-  full_name: IEEE International Symposium on Hardware Oriented Security and Trust
-  link: https://host.conferences.computer.org/2026/
-  deadline: TBA
-  abstract_deadline: TBA
-  timezone: TBA
-  place: Washington DC, USA
-  date: May 4-7, 2026
-  start: '2026-05-04'
-  end: '2026-05-07'
-  sub:
-  - ARCH
-  - CAD
 - title: ICPP
   year: 2026
   id: icpp26
@@ -1128,20 +1043,6 @@
   sub:
   - ARCH
   - APP
-- title: SOCC
-  year: 2026
-  id: socc26
-  full_name: IEEE International System-on-Chip Conference
-  link: https://www.ieee-socc.org/
-  deadline: TBA
-  timezone: TBA
-  place: Heidelberg, Germany
-  date: September 30 - October 2, 2026
-  start: '2026-09-30'
-  end: '2026-10-02'
-  sub:
-  - CAD
-  - ARCH
 - title: SysCon
   year: 2026
   id: syscon26
@@ -1183,20 +1084,6 @@
   end: '2026-04-30'
   sub:
   - ARCH
-  - APP
-- title: ICPE
-  year: 2026
-  id: icpe26
-  full_name: ACM/SPEC International Conference on Performance Engineering
-  link: https://icpe2026.spec.org/
-  deadline: TBA
-  abstract_deadline: TBA
-  timezone: TBA
-  place: TBA
-  date: TBA
-  start: TBA
-  end: TBA
-  sub:
   - APP
 - title: Euromicro-PDP
   year: 2026
