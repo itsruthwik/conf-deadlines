@@ -90,7 +90,7 @@ function load_conference_list() {
     conf_list_all.push({
       id: "{{conf.id}}-deadline",
       abbreviation: "{{conf.id}}",
-      name: "{{conf.title}} {{conf.year}}",
+      name: "{{conf.title | split: ' (' | first}} {{conf.year}}",
       color: "red",
       link: "{{conf.link}}",
       location: "{{conf.place}}",
@@ -114,7 +114,7 @@ function load_conference_list() {
       conf_list_all.push({
         id: "{{conf.id}}-conference",
         abbreviation: "{{conf.id}}",
-        name: "{{conf.title}} {{conf.year}}",
+        name: "{{conf.title | split: ' (' | first}} {{conf.year}}",
         color: color,
         link: "{{conf.link}}",
         location: "{{conf.place}}",
@@ -126,6 +126,15 @@ function load_conference_list() {
       });
     {% endif %}
   {% endfor %}
+
+  // Drop duplicates, e.g. ASPLOS (Spring) and ASPLOS (Fall) share one conference event
+  var seen = {};
+  conf_list_all = conf_list_all.filter(function (e) {
+    var key = e.id.split("-").pop() + "|" + e.name + "|" + e.startDate;
+    if (seen[key]) return false;
+    seen[key] = true;
+    return true;
+  });
 
   return conf_list_all;
 }

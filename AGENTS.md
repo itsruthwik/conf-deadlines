@@ -28,6 +28,10 @@ All conference data lives in `_data/conferences.yml`. Each entry requires: `titl
 - `sub`: list of subject tags from `_data/types.yml` (currently `ARCH`, `CAD`, `APP`)
 - Optional: `abstract_deadline`, `note`, `hindex`, `paperslink`, `full_name`, `start`, `end`
 
+### Conference list is locked
+
+Do not add conferences that aren't already tracked in `_data/conferences.yml`. Only add or update new editions of existing ones (e.g. adding `dac28` when `dac27` exists is fine; adding a conference with no prior entry is not). Ask the user before adding anything new.
+
 ## Python utility
 
 `utils/process.py` sorts and cleans conference data. Run from inside `utils/` dir (reads `../_data/conferences.yml`). Outputs `sorted_data.yml` — manually copy back after screening.
